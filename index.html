@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="shortcut icon" href="./icon.png" type="image/x-icon" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url("sunset.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 100vh;
+      }
+
+      .weather-container {
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+      }
+
+      .weather-info {
+        margin-top: 20px;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: rgba(0, 136, 204, 0.8);
+        color: white;
+        padding: 1.2vh;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        height: 5vh;
+      }
+
+      .temperature {
+        font-size: 64px;
+        color: #0088cc;
+      }
+
+      nav h1 {
+        margin: 0;
+      }
+
+      nav input[type="text"] {
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: white;
+        width: 28vw;
+      }
+
+      nav button {
+        background-color: white;
+        color: #0088cc;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      footer {
+        text-align: center;
+        background-color: rgba(0, 136, 204, 0.8);
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        position: relative;
+        margin-top: 150px;
+        height: 30vh;
+      }
+
+      .weather-icon {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .weather-icon img {
+        height: 20vh;
+      }
+
+      .quote {
+        margin-top: 170px;
+      }
+
+      @media screen and (max-width: 600px) {
+        .weather-container {
+          max-width: 90%;
+        }
+
+        .temperature {
+          font-size: 48px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h1>Weather App</h1>
+      <form id="search-form">
+        <input type="text" id="city-input" placeholder="Enter city name" />
+        <button type="submit">Search</button>
+      </form>
+    </nav>
+    <div class="weather-container">
+      <div class="weather-info">
+        <p>
+          <strong>Temperature :</strong> <span id="temp"></span> &#8451;
+        </p>
+        <p><strong>Min. Temperature :</strong> <span id="min_temp"></span></p>
+        <p><strong>Max. Temperature :</strong> <span id="max_temp"></span></p>
+        <p><strong>Humidity :</strong> <span id="humidity"></span>%</p>
+        <p><strong>Wind Speed :</strong> <span id="wind_speed"></span> m/s</p>
+        <p><strong>Sunrise Time :</strong> <span id="sunrise"></span></p>
+        <p><strong>Sunset Time :</strong> <span id="sunset"></span></p>
+        <p>
+          <strong>Feels Like :</strong> <span id="feels_like"></span> &#8451;
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <div class="weather-icon">
+        <img src="weather.gif" alt="Weather Icon" />
+      </div>
+      <p class="quote">
+        "Sunshine is delicious, rain is refreshing, wind braces us up, snow is
+        exhilarating; there is really no such thing as bad weather, only
+        different kinds of good weather." - Shivam Singh 😇
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
